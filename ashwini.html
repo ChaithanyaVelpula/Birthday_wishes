@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Birthday Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #fce4ec;
+            color: #880e4f;
+        }
+        .wish {
+            font-size: 2rem;
+            margin: 10px;
+            animation: fadeIn 1.5s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy Birthday Ashwini❤️ 🎂</h1>
+    <div id="wishes"></div>
+
+    <script>
+        const container = document.getElementById('wishes');
+        function addWish() {
+            const wish = document.createElement('div');
+            wish.textContent = '🎈 Happy Birthday Ashwini❤️! 🎁';
+            wish.classList.add('wish');
+            container.appendChild(wish);
+            setTimeout(addWish, 500);
+        }
+        addWish();
+    </script>
+</body>
+</html>
